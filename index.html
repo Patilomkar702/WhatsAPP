@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Whats App Page</title>
+    
+    <script>
+      var value1 ="";
+      let sClicked = (sbtn) => {
+        let new_ele = document.querySelector("#sn").cloneNode(true);
+        let user_text = sbtn.parentElement.parentElement.nextElementSibling;
+        let parent_con = document.querySelector("#cmbox");
+        new_ele.children[0].textContent = user_text.value;
+        parent_con.appendChild(new_ele);
+        user_text.value = "";
+      };
+      let rClicked = (rbtn) => {
+        let new_ele = document.querySelector("#rc").cloneNode(true);
+        let user_text = rbtn.parentElement.parentElement.nextElementSibling;
+        let parent_con = document.querySelector("#cmbox");
+        new_ele.children[0].textContent = user_text.value;
+        parent_con.appendChild(new_ele);
+        user_text.value = "";
+      };
+
+
+
+    </script>
+
+  </head>
+  <body>
+    <!-- Navbar -->
+      <div class="container-fluid">
+        <nav class="row align-items-center justify-content-between sticky-top" style="max-height: 10vh; background-color: rgb(34, 156, 107);">
+          <div class="col-2 ml-3"><i class="fa fa-whatsapp text-white" style="font-size:36px"></i></div>
+          <div class="col-4 d-flex justify-content-center align-self-end h3 text-white mb-0" style="font-family: sans-serif; text-shadow: 1px 1px black; text-shadow: -1px -1px black;"><b>WhatsAPP</b></div>
+        </nav>
+
+        <!-- chat Box-->
+        <div class="row" style="min-height: 70vh;">
+          <div class="col-12" style="background-image: url(whatsappBg.jpg);" id="cmbox">
+            <div class="receiver d-flex justify-content-end" id="sn">
+              <p style="background-color: rgb(134, 232, 125);" class="pl-4 pr-4 rounded mt-1 text-break"> Hi, This is Omkar</p>
+
+            </div>
+            <div class="sender d-flex justify-content-start" id="rc">
+              <p style="background-color: rgb(225, 247, 223);" class="pl-4 pr-4 rounded text-break">Hiii.. Whats Up</p>
+            </div>  
+          </div>
+        </div>
+
+        <!-- Mobiles Of user and Receiver-->
+        <div class="row bg-secondary justify-content-between" style="height: 20vh;">
+          
+            
+          <div class="col-6 bg-dark text-white">
+            <div class="row bg-danger p-0" style="height: 100%;">
+              <div class="col-12 bg-dark text-white d-flex flex-column justify-content-center">
+                <div class="row justify-content-between">
+                  <div class="col-6"> <label>Receiver</label></div>
+                  <div class="col-6 d-flex justify-content-end">  <button type="button" class="btn btn-outline-success mb-2 btn-sm" onclick="rClicked(this)">Enter</button></div>
+                 
+                
+                </div>
+                <textarea placeholder="Enter Chat from Receiver"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 bg-dark text-white">
+            <div class="row bg-danger p-0" style="height: 100%;">
+              <div class="col-12 bg-dark text-white d-flex flex-column justify-content-center">
+                <div class="row justify-content-between">
+                  <div class="col-6"> <label>Sender</label></div>
+                  <div class="col-6 d-flex justify-content-end" >  <button type="button" class="btn btn-outline-success btn-sm mb-2" onclick="sClicked(this)">Enter</button></div>
+                 
+                
+                </div>
+                <textarea placeholder="Enter Chat from Sender"></textarea>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
